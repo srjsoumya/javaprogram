@@ -3,11 +3,10 @@ package testingjava;
 public class FormatNo16 {
     private static String format(String input) {
         String output = "";
-        for (int i = 1; i < input.length(); i++) {
+        for (int i = 1; i < input.length(); i+=2) {
             for (int j = 0; j < Character.getNumericValue(input.charAt(i)); j++) {
                 output += input.charAt(i - 1);
             }
-            i++;
         }
 
         return output;
